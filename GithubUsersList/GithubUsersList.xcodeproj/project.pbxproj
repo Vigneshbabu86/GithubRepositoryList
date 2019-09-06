@@ -20,6 +20,9 @@
 		18CCAEB7232223C50040F01B /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CCAEB6232223C50040F01B /* DashboardViewController.swift */; };
 		18CCAEB8232223C50040F01B /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CCAEB6232223C50040F01B /* DashboardViewController.swift */; };
 		18CCAEB9232223C50040F01B /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CCAEB6232223C50040F01B /* DashboardViewController.swift */; };
+		18CCAEBE232227270040F01B /* DashboardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CCAEBD232227270040F01B /* DashboardPresenter.swift */; };
+		18CCAEBF232227270040F01B /* DashboardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CCAEBD232227270040F01B /* DashboardPresenter.swift */; };
+		18CCAEC0232227270040F01B /* DashboardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CCAEBD232227270040F01B /* DashboardPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,7 @@
 		18CCAE9E232218F00040F01B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18CCAEB02322234F0040F01B /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		18CCAEB6232223C50040F01B /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		18CCAEBD232227270040F01B /* DashboardPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +86,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18200E0323222A8C00DA51EF /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		18200E0423222AA600DA51EF /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				18CCAEAB232222450040F01B /* DeatiledUserProjects */,
+				18CCAEAA232222360040F01B /* Dashboard */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		18200E0523222AC100DA51EF /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				18200E0623222ACC00DA51EF /* Constants */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		18200E0623222ACC00DA51EF /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		18CCAE6B232218EF0040F01B = {
 			isa = PBXGroup;
 			children = (
@@ -105,12 +140,12 @@
 		18CCAE76232218EF0040F01B /* GithubUsersList */ = {
 			isa = PBXGroup;
 			children = (
+				18200E0523222AC100DA51EF /* Common */,
+				18200E0423222AA600DA51EF /* Modules */,
 				18CCAEB4232223720040F01B /* Scene Delagte */,
 				18CCAEAF232222EE0040F01B /* Storyboard */,
 				18CCAEAD232222A00040F01B /* AppDelegate */,
 				18CCAEAC2322227C0040F01B /* Resources */,
-				18CCAEAB232222450040F01B /* DeatiledUserProjects */,
-				18CCAEAA232222360040F01B /* Dashboard */,
 				18CCAE83232218F00040F01B /* Assets.xcassets */,
 				18CCAE88232218F00040F01B /* Info.plist */,
 			);
@@ -138,6 +173,10 @@
 		18CCAEAA232222360040F01B /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
+				18200E0323222A8C00DA51EF /* Common */,
+				18CCAEBC232225D90040F01B /* Model */,
+				18CCAEBB232225AB0040F01B /* Worker */,
+				18CCAEBA232225A20040F01B /* Presenter */,
 				18CCAEB5232223880040F01B /* View */,
 			);
 			path = Dashboard;
@@ -189,6 +228,28 @@
 				18CCAEB6232223C50040F01B /* DashboardViewController.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		18CCAEBA232225A20040F01B /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				18CCAEBD232227270040F01B /* DashboardPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		18CCAEBB232225AB0040F01B /* Worker */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Worker;
+			sourceTree = "<group>";
+		};
+		18CCAEBC232225D90040F01B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -323,6 +384,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18CCAEB7232223C50040F01B /* DashboardViewController.swift in Sources */,
+				18CCAEBE232227270040F01B /* DashboardPresenter.swift in Sources */,
 				18CCAE82232218EF0040F01B /* GithubUsersList.xcdatamodeld in Sources */,
 				18CCAE78232218EF0040F01B /* AppDelegate.swift in Sources */,
 				18CCAEB12322234F0040F01B /* SceneDelegate.swift in Sources */,
@@ -336,6 +398,7 @@
 				18CCAE92232218F00040F01B /* GithubUsersListTests.swift in Sources */,
 				18CCAEB8232223C50040F01B /* DashboardViewController.swift in Sources */,
 				18CCAEB22322234F0040F01B /* SceneDelegate.swift in Sources */,
+				18CCAEBF232227270040F01B /* DashboardPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,6 +409,7 @@
 				18CCAE9D232218F00040F01B /* GithubUsersListUITests.swift in Sources */,
 				18CCAEB9232223C50040F01B /* DashboardViewController.swift in Sources */,
 				18CCAEB32322234F0040F01B /* SceneDelegate.swift in Sources */,
+				18CCAEC0232227270040F01B /* DashboardPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
