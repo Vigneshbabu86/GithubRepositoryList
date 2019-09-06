@@ -14,6 +14,9 @@
 		18A9A2722322DB37006EA56F /* GithubUserRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A9A2712322DB37006EA56F /* GithubUserRepo.swift */; };
 		18A9A2742322DB4F006EA56F /* GithubUserDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A9A2732322DB4F006EA56F /* GithubUserDetail.swift */; };
 		18A9A2772322DBFA006EA56F /* GithubRepoDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A9A2762322DBFA006EA56F /* GithubRepoDetailsCell.swift */; };
+		18A9A2792322DD9D006EA56F /* GithubSearcherBaseConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A9A2782322DD9D006EA56F /* GithubSearcherBaseConstant.swift */; };
+		18A9A27B2322E0CB006EA56F /* GithubUserSeachWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A9A27A2322E0CB006EA56F /* GithubUserSeachWorker.swift */; };
+		18A9A27E2322E131006EA56F /* GithubSearcherServiceHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A9A27D2322E131006EA56F /* GithubSearcherServiceHandler.swift */; };
 		18CCAE78232218EF0040F01B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CCAE77232218EF0040F01B /* AppDelegate.swift */; };
 		18CCAE7F232218EF0040F01B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18CCAE7D232218EF0040F01B /* Main.storyboard */; };
 		18CCAE82232218EF0040F01B /* GithubUsersList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 18CCAE80232218EF0040F01B /* GithubUsersList.xcdatamodeld */; };
@@ -57,6 +60,9 @@
 		18A9A2712322DB37006EA56F /* GithubUserRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubUserRepo.swift; sourceTree = "<group>"; };
 		18A9A2732322DB4F006EA56F /* GithubUserDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubUserDetail.swift; sourceTree = "<group>"; };
 		18A9A2762322DBFA006EA56F /* GithubRepoDetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubRepoDetailsCell.swift; sourceTree = "<group>"; };
+		18A9A2782322DD9D006EA56F /* GithubSearcherBaseConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearcherBaseConstant.swift; sourceTree = "<group>"; };
+		18A9A27A2322E0CB006EA56F /* GithubUserSeachWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubUserSeachWorker.swift; sourceTree = "<group>"; };
+		18A9A27D2322E131006EA56F /* GithubSearcherServiceHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSearcherServiceHandler.swift; sourceTree = "<group>"; };
 		18CCAE74232218EF0040F01B /* GithubUsersList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubUsersList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18CCAE77232218EF0040F01B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18CCAE7E232218EF0040F01B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -120,6 +126,7 @@
 		18200E0523222AC100DA51EF /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				18A9A27C2322E105006EA56F /* Managers */,
 				18200E0623222ACC00DA51EF /* Constants */,
 			);
 			path = Common;
@@ -128,6 +135,7 @@
 		18200E0623222ACC00DA51EF /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				18A9A2782322DD9D006EA56F /* GithubSearcherBaseConstant.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -171,6 +179,14 @@
 				18A9A2762322DBFA006EA56F /* GithubRepoDetailsCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		18A9A27C2322E105006EA56F /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				18A9A27D2322E131006EA56F /* GithubSearcherServiceHandler.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 		18CCAE6B232218EF0040F01B = {
@@ -301,6 +317,7 @@
 		18CCAEBB232225AB0040F01B /* Worker */ = {
 			isa = PBXGroup;
 			children = (
+				18A9A27A2322E0CB006EA56F /* GithubUserSeachWorker.swift */,
 			);
 			path = Worker;
 			sourceTree = "<group>";
@@ -448,7 +465,10 @@
 				18A9A2772322DBFA006EA56F /* GithubRepoDetailsCell.swift in Sources */,
 				18A9A2742322DB4F006EA56F /* GithubUserDetail.swift in Sources */,
 				18A9A2672322B527006EA56F /* GithubUserListTableViewCell.swift in Sources */,
+				18A9A2792322DD9D006EA56F /* GithubSearcherBaseConstant.swift in Sources */,
+				18A9A27E2322E131006EA56F /* GithubSearcherServiceHandler.swift in Sources */,
 				18A9A2702322DA65006EA56F /* UserDetailViewController.swift in Sources */,
+				18A9A27B2322E0CB006EA56F /* GithubUserSeachWorker.swift in Sources */,
 				18CCAEBE232227270040F01B /* DashboardPresenter.swift in Sources */,
 				18A9A26B2322C0AC006EA56F /* GithubUserConstants.swift in Sources */,
 				18CCAE82232218EF0040F01B /* GithubUsersList.xcdatamodeld in Sources */,
