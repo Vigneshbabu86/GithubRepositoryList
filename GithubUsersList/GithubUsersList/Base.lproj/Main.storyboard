@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Github Searcher-->
+        <!--Github User Searcher-->
         <scene sceneID="U0J-Bi-lFT">
             <objects>
-                <viewController id="Xpg-4r-YSS" customClass="DashboardViewController" customModule="GithubUsersList" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Github User Searcher" id="Xpg-4r-YSS" customClass="DashboardViewController" customModule="GithubUsersList" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zNv-5f-Hm3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -19,35 +19,52 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="93" id="Ly2-bL-KUp">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GithubUserCellIdentifier" rowHeight="93" id="Ly2-bL-KUp">
                                         <rect key="frame" x="0.0" y="28" width="414" height="93"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ly2-bL-KUp" id="Hqr-zq-aoo">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="93"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vhv-D4-4nh">
-                                                    <rect key="frame" x="20" y="9" width="83" height="74"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vhv-D4-4nh">
+                                                    <rect key="frame" x="20" y="11.5" width="70" height="70"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="70" id="TwQ-1k-RM4"/>
+                                                        <constraint firstAttribute="width" constant="70" id="mYB-Qz-FJD"/>
+                                                    </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="#UserName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="70L-PI-sgZ">
-                                                    <rect key="frame" x="127" y="36" width="160" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repo: ###" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mu2-23-gbk">
+                                                    <rect key="frame" x="314" y="36" width="80" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="#Repo" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mu2-23-gbk">
-                                                    <rect key="frame" x="334" y="36" width="60" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="UserName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="70L-PI-sgZ">
+                                                    <rect key="frame" x="110" y="36" width="184" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Vhv-D4-4nh" firstAttribute="centerY" secondItem="Hqr-zq-aoo" secondAttribute="centerY" id="0GC-Nb-SWR"/>
+                                                <constraint firstAttribute="centerY" secondItem="70L-PI-sgZ" secondAttribute="centerY" id="ALC-HI-03x"/>
+                                                <constraint firstAttribute="centerY" secondItem="Mu2-23-gbk" secondAttribute="centerY" id="BEZ-Fm-QNQ"/>
+                                                <constraint firstItem="Mu2-23-gbk" firstAttribute="leading" secondItem="70L-PI-sgZ" secondAttribute="trailing" constant="20" id="HCv-gM-DAj"/>
+                                                <constraint firstItem="70L-PI-sgZ" firstAttribute="leading" secondItem="Vhv-D4-4nh" secondAttribute="trailing" constant="20" id="Wwz-cO-xHV"/>
+                                                <constraint firstItem="Mu2-23-gbk" firstAttribute="trailing" secondItem="Hqr-zq-aoo" secondAttribute="trailingMargin" id="gvs-nP-iNd"/>
+                                                <constraint firstItem="Vhv-D4-4nh" firstAttribute="leading" secondItem="Hqr-zq-aoo" secondAttribute="leadingMargin" id="q8X-Xs-lkT"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Re1-c2-Piq" kind="show" id="3ci-SI-yyR"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Xpg-4r-YSS" id="chm-3T-Nad"/>
+                                    <outlet property="delegate" destination="Xpg-4r-YSS" id="uhe-zh-eeg"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -60,10 +77,40 @@
                         <viewLayoutGuide key="safeArea" id="87M-Pu-6kp"/>
                     </view>
                     <navigationItem key="navigationItem" title="Github Searcher" id="KN8-hJ-w7B"/>
+                    <connections>
+                        <outlet property="githubUserListTableView" destination="Xc2-me-63H" id="Kka-ZV-DQv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Tv-LL-XbO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="718.84057971014499" y="141.96428571428569"/>
+        </scene>
+        <!--Github User Info-->
+        <scene sceneID="wus-0M-zh8">
+            <objects>
+                <viewController title="Github User Info" id="Re1-c2-Piq" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xA9-y4-Rao">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YeA-0i-ZBC">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="YeA-0i-ZBC" firstAttribute="top" secondItem="2nV-5Q-tnU" secondAttribute="top" id="Auw-97-59U"/>
+                            <constraint firstItem="YeA-0i-ZBC" firstAttribute="bottom" secondItem="2nV-5Q-tnU" secondAttribute="bottom" id="GyE-vi-kUc"/>
+                            <constraint firstItem="YeA-0i-ZBC" firstAttribute="trailing" secondItem="2nV-5Q-tnU" secondAttribute="trailing" id="Pqq-Fj-Rbz"/>
+                            <constraint firstItem="YeA-0i-ZBC" firstAttribute="leading" secondItem="2nV-5Q-tnU" secondAttribute="leading" id="n72-Jb-jXO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2nV-5Q-tnU"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CMI-KB-y4E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1418.840579710145" y="167.41071428571428"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wXN-LL-prc">
